@@ -10,9 +10,12 @@ Este se compone de dos partes:
 2. Análisis y conclusión
 
 ## 1.Importando y Limpiando los datos
+Despúes de importar los datos, se buscan los registros cuyos valores son casí 
+todos nulos, en este paso se ha reducido el conjunto de datos en 25723 a 6309
 
 
 ## 2.Análisis y conclusión
+
 
 
 
