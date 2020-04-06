@@ -57,12 +57,10 @@ def shark_species(x):
         return 'White'
     elif re.search(r'(?i)(tiger)',x):
         return 'Tiger'
-    elif  re.search(r'(?i)(bull)',x):
+    elif  re.search(r'(?i)(bull)|(?i)(zambe)|(?i)(leucas)',x):
         return 'Bull'
     elif  re.search(r'(?i)(grey)',x):
         return 'Grey'
-    elif  re.search(r'(?i)(zambes)',x):
-        return 'Zambesi'
     elif  re.search(r'(?i)(gangetic)',x):
         return 'Ganges'
     elif  re.search(r'(?i)(wobbegong)',x):
@@ -87,7 +85,59 @@ def shark_species(x):
         return 'Dusky' 
     elif  re.search(r'(?i)(lem+on)',x):
         return 'Lemmon' 
+    elif  re.search(r'(?i)(dogfis)|(?i)(Spurdog)',x):
+        return 'Dogfish' 
+    elif  re.search(r'(?i)(Thresher)',x):
+        return 'Thresher' 
+    elif  re.search(r'(?i)(reef)',x):
+        return 'Caribean reef' 
+    elif  re.search(r'(?i)(cookis)',x):
+        return 'Cookiecutter' 
+    elif  re.search(r'(?i)(sevengill)',x):
+        return 'Broadnose sevengill' 
     else:
-        return x 
+        return 'Unidentified' 
 
+def shark_size(x):
+    size_m=0
+    # find the size in m
+    if re.search(r'[\d][\s?]+[(?i)m]|[\d]+[\.\d]+[\s?]+[(?i)m]|[\d\.\d]+[(?i)m]',x):
+        size=re.findall(r'[\d][\s?]+[(?i)m]|[\d]+[\.\d]+[\s?]+[(?i)m]|[\d\.\d]+[(?i)m]',x)
+        if len(size)==1:
+            try:
+                return float(''.join(re.findall(r'[0-9]+\.[0-9]|[0-9]',size[0])))
+            except ValueError:
+                print(f'el valor que no sale es {size} -> {x}')
+
+        for i in size:
+            try:
+                size_m+=float(''.join(re.findall(r'[0-9]+\.[0-9]|[0-9]',i)))/len(size)
+            except ValueError:
+                print(f'el valor que no sale es :{i} de {size} -> {x}')
+
+        return size_m
+    #find the size in foot
+    elif re.search(r'[\d]+\'',x):
+        size=re.findall(r'[\d]+\'',x)
+        if len(size)==1:
+            try:
+                return round(float(''.join(re.findall(r'[0-9]+\.[0-9]|[0-9]',size[0])))*0.3048,1)
+            except ValueError:
+                print(f'el valor que no sale es {size} -> {x}')
+        
+        for i in size:
+            try:
+                size_m+=float(''.join(re.findall(r'[0-9]+\.[0-9]|[0-9]',i)))/len(size)
+            except ValueError:
+                print(f'el valor que no sale es :{i} de {size} -> {x}')
+
+        return round(size_m*0.3048,1)
+
+    elif re.search(r'[\d]',x):
+        return x
+
+    else:
+        return None
+    
+        
 
