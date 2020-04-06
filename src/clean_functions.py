@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 import re
+import datetime as dt
 
 #Define la nueva columna con el valor númerico donde no pone -1
 def promedio_hora(vector_hora):
@@ -134,10 +135,49 @@ def shark_size(x):
         return round(size_m*0.3048,1)
 
     elif re.search(r'[\d]',x):
-        return x
+        print(f" lo que no se pudo -> {x}")
+        return None
 
     else:
         return None
-    
-        
+
+# To convert the column in dates
+def date_format(x):
+    date=x.split(-)
+    if len(date)==3:
+
+        try:
+            year=int(''.join(re.findall(r'\d{4}',x)))
+        except ValueError:
+            print(f'Error procesando año el valor que no sale es {date} -> {x}')
+
+        if year < 1800 or year>2020:
+            print(f"no se proceso ->  {x} por ser año {year}")
+            return None
+        try:
+            day=re.findall(r'^\d{2}-',x)
+        except ValueError:
+            print(f'Error procesando año el valor que no sale es {day} -> {date} -> {x}')
+
+        if day <1 or day>31:
+            print(f"no se proceso ->  {x} por ser dia {day}")
+            return None
+
+        try:
+            month=re.findall(r'-\w{3}-',x)
+        except ValueError:
+            print(f'Error procesando año el valor que no sale es {month} -> {date} -> {x}')
+
+
+
+
+
+ 
+
+
+
+
+
+
+
 
