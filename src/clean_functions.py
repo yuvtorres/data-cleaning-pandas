@@ -143,51 +143,41 @@ def shark_size(x):
 
 # To convert the column in dates
 def date_format(x):
-    if re.search('\d{2}\-\w{3}\-\d{4}|\d{1}\-\w{3}\-\d{4}',x):
+
+    if re.search(r'\d{2}\-\w{3}\-\d{4}|\d{1}\-\w{3}\-\d{4}',x):
         try:
-            x=re.findall('\d{2}\-\w{3}\-\d{4}|\d{1}\-\w{3}\-\d{4}',x)
+            x=re.findall(r'\d{2}\-\w{3}\-\d{4}|\d{1}\-\w{3}\-\d{4}',x)
             return dt.datetime.strptime(x[0],'%d-%b-%Y')
         except ValueError:
             print(f'Error retornando en split por - -> {x}')
 
- 
-    if re.search('\d{2}\/\d{2}\/+\d{4}',x):
+    if re.search(r'\d{2}\/\d{2}\/+\d{4}',x):
         try:
-            x=re.findall('\d{2}\/\d{2}\/+\d{4}',x)
+            x=re.findall(r'\d{2}\/\d{2}\/+\d{4}',x)
             return dt.datetime.strptime(x[0],'%d/%m/%Y')
         except ValueError:
             print(f'Error retornando en split por / -> {x}')
 
-    if re.search('\d{4}-\d{2}-\d{2}',x):
+    if re.search(r'\d{4}-\d{2}-\d{2}',x):
         try:
-            x=re.findall('\d{4}-\d{2}-\d{2}',x)
+            x=re.findall(r'\d{4}-\d{2}-\d{2}',x)
             return dt.datetime.strptime(x[0],'%Y-%m-%d')
         except ValueError:
             print(f'Error retornando en split por - en Y m d -> {x}')
 
-    if re.search('[a-zA-Z]{3}-\d{4}',x):
+    if re.search(r'\d{2}-\d{2}-\d{4}',x):
         try:
-            x=re.findall('[a-zA-Z]{3}-\d{4}',x)
+            x=re.findall(r'\d{2}-\d{2}-\d{4}',x)
+            return dt.datetime.strptime(x[0],'%m-%d-%Y')
+        except ValueError:
+            print(f'Error retornando en split por - en d-m-Y -> {x}')
+    
+    if re.search(r'[a-zA-Z]{3}-\d{4}',x):
+        try:
+            x=re.findall(r'[a-zA-Z]{3}-\d{4}',x)
             return dt.datetime.strptime(x[0],'%b-%Y')
         except ValueError:
             print(f'Error retornando en split por - en Y m d -> {x}')
-
-
+    
     print(f'este aun no esta {x}')
     return None
-   
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
