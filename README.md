@@ -1,6 +1,8 @@
 # Using Pandas for cleaning data sets and for analize it
 
-![Primer proyecto Ironhack](https://github.com/yuvtorres/data-cleaning-pandas/blob/master/input/shark.jpg) 
+<p align="center">
+  <img width="460" height="300" src="hhttps://github.com/yuvtorres/data-cleaning-pandas/blob/master/input/shark.jpg">
+</p>
 
 Trata sobre validar una hipótesis sobre los datos 
 de tiburones que se encuentrán en [kaggle](https://www.kaggle.com/teajay/global-shark-attacks).
