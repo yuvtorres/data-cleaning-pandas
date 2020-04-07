@@ -1,7 +1,7 @@
 # Using Pandas for cleaning data sets and for analize it
 
 Primer proyecto Ironhack
-
+(input/shark.jpg)
 Trata sobre validar una hipótesis sobre los datos 
 de tiburones que se encuentrán en [kaggle](https://www.kaggle.com/teajay/global-shark-attacks).
 Este se compone de dos partes:
@@ -9,7 +9,7 @@ Este se compone de dos partes:
 1. Importación y limpieza de datos
 2. Análisis y conclusión
 
-## 1.Importando y Limpiando los datos
+## 1.Importando y limpiando los datos
 
 Despúes de importar los datos, se buscan las celda cuyos valores son nulos.
 El primer filtro se hizo por registro, contando en cada registro el número de 
@@ -53,4 +53,4 @@ También encotramos que las especies más más peligrosas son: el tiburón blanc
 Al realizar un análisis cruzado entre países y especies, no se encontró ningún comportamiento atípico respecto a lo ya dicho:
 es decir la mayoría de casos se concentran en USA y corresponde con los casos no identificados y el tiburón blanco.
 
-Por último el análisis por actividad muestra que casi una tercera parte de los ataques se registran en surfistas.  
+Por último el análisis por actividad muestra que casi una tercera parte de los ataques se registran en surfistas. 
