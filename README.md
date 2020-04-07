@@ -38,8 +38,19 @@ Las últimas columnas que se han retirado del conjunto de datos antes de exporta
 
 ## 2.Análisis y conclusión
 
+El análisis consitió en ver la evolución de los ataques reportados, pudiendo establecer un repunte
+durante las decadas de los 80 y 90. Y un comportamiento estable a partir del año 2000.
 
+También resulta llamativo el pico de los años 60's.
 
+Respecto a la tendencia por país se puede decir que solamente tres paises: USA, Australia y Sudafrica tiene entre los 3 
+el 85% de los casos.
 
+En cuanto al comportamiento estacionario, como es de esperar, los ataques se concentran en los periodos estivales, sin importar el emisferio.
 
+También encotramos que las especies más más peligrosas son: el tiburón blanco y el tigre, no obstante la especie queda sin determinar en una tercera parte de los ataques.
 
+Al realizar un análisis cruzado entre países y especies, no se encontró ningún comportamiento atípico respecto a lo ya dicho:
+es decir la mayoría de casos se concentran en USA y corresponde con los casos no identificados y el tiburón blanco.
+
+Por último el análisis por actividad muestra que casi una tercera parte de los ataques se registran en surfistas.  

@@ -181,3 +181,31 @@ def date_format(x):
     
     print(f'este aun no esta {x}')
     return None
+
+
+def clean_activity(x):
+    if re.search('(?i)(diving|Dive)',x):
+        return "Diving"
+    if re.search('(?i)(Surf)',x):
+        return "Surf"
+    if re.search('(?i)(Swimming|Bathing|Floating)',x):
+        return 'Swimming'
+    if re.search('(?i)(Spearfishing)',x):
+        return 'Spearfishing'
+    if re.search('(?i)(Wading|Treading|Walking|Jump|Crouch|Standin)',x):
+        return 'Wading'
+    if re.search('(?i)(Fish|Killing|Hunt)',x):
+        return 'Fishing'
+    if re.search('(?i)(Snorkeling)',x):
+        return 'Snorkeling'
+    if re.search('(?i)(boarding)',x):
+        return 'Boarding'
+    if re.search('(?i)(sk)',x):
+        return 'Water sky'
+
+
+
+
+
+    else:
+        return x
