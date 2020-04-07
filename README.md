@@ -1,7 +1,7 @@
 # Using Pandas for cleaning data sets and for analize it
 
 <p align="center">
-  <img width="460" height="300" src="hhttps://github.com/yuvtorres/data-cleaning-pandas/blob/master/input/shark.jpg">
+  <img width="460" height="300" src="input/shark.jpg">
 </p>
 
 Trata sobre validar una hipótesis sobre los datos 
